@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+ pg:
+  image: postgres:14
+  ports:
+   - "7432:5432"
+  container_name: pg
+  environment:
+    POSTGRES_USER       : postgres
+    POSTGRES_PASSWORD   : postgres
+
+ toba_docker:
+  build:
+    context: .
+    dockerfile: ./Dockerfile
+  container_name: toba_docker
+  ports:
+   - "7008:8080"
+  environment:
+    DOCKER_NAME                       : toba_docker
+    DOCKER_WEB_PORT                   : 7008
+    TOBA_PASS                         : toba
+    TOBA_BASE_PASS                    : postgres
+    TOBA_INSTALACION_DIR              : /var/local/docker-data/toba_docker-instalacion
+    TOBA_BASE_HOST                    : pg
+    TOBA_BASE_NOMBRE                  : toba_toba_docker
+    TOBA_PROYECTO                     : toba_docker
+    TOBA_PROYECTO_DIR                 : /var/local/toba_docker
+    TOBA_PROYECTO_ALIAS               : /toba_docker
+    TOBA_PROYECTO_INSTALAR            : "True"
+    TOBA_INSTALAR_REFERENCIA          : "True"
+    TOBA_INSTALAR_USUARIOS            : "True"
+  links:
+   - pg
+  volumes:
+   - .:/var/local/toba_docker
+   - ./instalacion:/var/local/docker-data/toba_docker-instalacion
+   - ./proyecto:/var/local/docker-data/proyecto
+   - ./80-siu.ini:/etc/php81/conf.d/80-siu.ini

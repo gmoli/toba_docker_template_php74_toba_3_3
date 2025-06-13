@@ -1,0 +1,21 @@
+parameters:
+# Parametros de la instalacion
+    toba-id-desarrollador: 0
+    toba-tipo-instalacion: 0
+    toba-nombre-instalacion: toba_docker
+
+# Parametros de la base de datos o instancia
+    toba-base-profile: pg
+    toba-base-usuario: postgres
+    toba-base-nombre: toba_3_4
+    toba-base-puerto: 5432
+
+# Ruta absoluta a los archivos con las claves en texto plano
+    toba-archivo-clave-bd: /tmp/clave_pg
+    toba-archivo-clave-admin:  /tmp/clave_toba
+
+# Identificador del usuario administrador de la instalacion
+    toba-usuario-admin: toba
+    
+    
+    
