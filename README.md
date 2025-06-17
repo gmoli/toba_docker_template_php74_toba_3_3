@@ -78,7 +78,16 @@ Verificar permisos correspondientes en los directorios:
 ## Base de datos
 Acceso:  localhost:7432
 
-## Bajar stack
+## Algunos comandos
+#### Stop del stack
+```bash
+docker compose stop
+```
+#### Start del stack
+```bash
+docker compose start
+```
+#### Bajar el stack
 ```bash
 docker compose down
 ```
