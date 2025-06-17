@@ -87,7 +87,7 @@ docker compose stop
 ```bash
 docker compose start
 ```
-#### Bajar el stack
+#### Bajar el stack (Ojo que borra todo)
 ```bash
 docker compose down
 ```
