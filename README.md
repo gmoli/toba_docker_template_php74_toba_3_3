@@ -13,6 +13,8 @@ docker exec -it toba_docker bash
 ## Instalar toba
 ### Opción 1 - Instalacion silenciosa
 Se puede utilizar la instalación utilizando los parametros del archivo parameters.yml (pueden editar el archivo con "nano /usr/local/build/parameters.yml")
+Si están trabajando en equipo recuerden setear un número de desarrrollador para cada miembro del equipo. 
+
 ```bash
 bin/toba instalacion_silenciosa instalar --archivo_configuracion /usr/local/build/parameters.yml
 ```
