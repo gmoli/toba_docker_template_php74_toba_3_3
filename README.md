@@ -67,13 +67,13 @@ source entorno_toba.env
 toba proyecto cargar -p proyecto_toba -d '/var/local/docker-data/proyecto/proyecto_toba'
 ```
 Otorgar permisos en directorios ,  en desarrollo se puede hacer :
-
+```bash
 chmod -R 777 /var/local/docker-data/proyecto
 
 chmod -R 777 /var/local/docker-data/toba_docker-instalacion
 
 chmod -R 777 /usr/local/build/vendor/
-
+```
 
 ## Base de datos
 Acceso:  localhost:7432
