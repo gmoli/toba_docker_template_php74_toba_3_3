@@ -37,4 +37,4 @@ services:
    - .:/var/local/toba_docker
    - ./instalacion:/var/local/docker-data/toba_docker-instalacion
    - ./proyecto:/var/local/docker-data/proyecto
-   - ./80-siu.ini:/php7/conf.d/80-siu.ini
+   - ./80-siu.ini:/etc/php7/conf.d/80-siu.ini
