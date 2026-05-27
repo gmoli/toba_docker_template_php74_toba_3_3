@@ -11,10 +11,8 @@ services:
     POSTGRES_PASSWORD   : postgres
 
  toba_docker:
-  build:
-    context: .
-    dockerfile: ./Dockerfile
-  container_name: toba_docker
+    image: gmoli/toba_docker_template_php74_toba_3_3-main-toba_docker:latest
+    container_name: toba_docker
   ports:
    - "7008:8080"
   environment:
