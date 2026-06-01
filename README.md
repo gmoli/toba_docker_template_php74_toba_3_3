@@ -66,7 +66,7 @@ El directorio  "/var/local/docker-data/proyecto"  se encuentra montado,  se pued
 source entorno_toba.env
 toba proyecto cargar -p proyecto_toba -d '/var/local/docker-data/proyecto/proyecto_toba'
 ```
-Otorgar permisos en directorios ,  en desarrollo se puede hacer :
+Otorgar permisos en directorios  (solo en desarrollo) :
 ```bash
 chmod -R 777 /var/local/docker-data/proyecto
 
